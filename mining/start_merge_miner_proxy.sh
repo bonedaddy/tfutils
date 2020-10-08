@@ -21,7 +21,10 @@ if [[ "$WALLET_ADDRESS" == "CHANGEME" ]]; then
 fi
 
 if [[ "$TESTNET" == "true" ]]; then
-    monerod --testnet --data-dir="$MONEROD_DATADIR" --detach
+    # you will need a patched monerod build for proper use, right now
+    # i compiled this and named it `monerod-townforge-patch` in my $PATH
+    # monerod --testnet --data-dir="$MONEROD_DATADIR" --detach
+    monerod-townforge-patch --testnet --data-dir="$MONEROD_DATADIR" --detach
     townforged --rpc-bind-port 18881 --data-dir="$TOWNFORGE_DATADIR" --detach
     townforge-merge-mining-proxy --monero-daemon-address 127.0.0.1:28081 --aux-daemon-address 127.0.0.1:18881 --rpc-bind-port 18083 --aux-wallet-address "$WALLET_ADDRESS"
 else
