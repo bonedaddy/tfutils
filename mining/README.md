@@ -1,0 +1,3 @@
+# townforge mining tutorial
+
+After downloading `townforged` and letting it sync up with the network, you can watch the `./townforge_mining.webm` video to learn how to start solo mining townforge. Note you need to flush the two transactions once you're synced to start mining because one, or both of those transactions if included in a block will cause block validation to fail this will likely not matter in the future but for now while the transactions are in the pool of most nodes, you will need to do this.
