@@ -1,0 +1,3 @@
+[submodule "monerod-6680"]
+	path = monerod-6680
+	url = https://github.com/moneromooo-monero/bitmonero.git
